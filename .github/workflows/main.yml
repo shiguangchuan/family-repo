@@ -32,7 +32,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
           folder: publish
-          branch: main
-          # The personal access token that authorize repo access
+          branch: gh-pages
 
 

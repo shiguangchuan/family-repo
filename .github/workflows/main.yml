@@ -23,20 +23,11 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      # - uses: actions/checkout@v3
 
       - name: Download & transform IPTV playlist
-        run: |
-          mkdir ./publish
-          curl --silent --fail https://raw.githubusercontent.com/qwerttvv/Beijing-IPTV/master/IPTV-Unicom-Multicast.m3u \
-          | awk '{
-              if ($0 ~ /^rtp:\/\//) {
-                  sub(/\:\/\//, "/");
-                  print "http://192.168.10.1:8686/"$0;
-              } else {
-                  print $0;
-              }
-          }' > ./publish/iptv.m3u
+        # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+        uses: actions/checkout@v3
+        run: bash ./generate.sh
       
       - name: Deploy
         uses: tsunematsu21/actions-publish-gh-pages@v1.0.2

@@ -46,5 +46,5 @@ jobs:
           # The name of the remote branch that publishing source for GitHub Pages site
           branch: main
           # The personal access token that authorize repo access
-          token: {{ secrets.ACTIONS_DEPLOY_KEY }}
+
 

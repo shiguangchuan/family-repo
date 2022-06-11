@@ -2,6 +2,7 @@
 
 set -e
 set -o pipefail
+set -x
 
 mkdir ./publish
 curl --silent --fail https://raw.githubusercontent.com/qwerttvv/Beijing-IPTV/master/IPTV-Unicom-Multicast.m3u \

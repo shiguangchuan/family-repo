@@ -14,3 +14,5 @@ curl --silent --fail https://raw.githubusercontent.com/qwerttvv/Beijing-IPTV/mas
         print $0;
     }
 }' > ./publish/iptv.m3u
+
+ls -l ./publish/

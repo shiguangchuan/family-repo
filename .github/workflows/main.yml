@@ -29,11 +29,9 @@ jobs:
         run: bash ./generate.sh
       
       - name: Deploy
-        uses: tsunematsu21/actions-publish-gh-pages@v1.0.2
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
-          # The name of the directory that containing the content to be published
-          dir: ./publish
-          # The name of the remote branch that publishing source for GitHub Pages site
+          folder: publish
           branch: main
           # The personal access token that authorize repo access
 

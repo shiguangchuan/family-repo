@@ -40,7 +40,7 @@ jobs:
         uses: actions/download-artifact@v3
 
       - name: Generate index
-        runs: python ./script/generate_html.py
+        run: python ./script/generate_html.py
 
       - name: Publish to Pages
         uses: JamesIves/github-pages-deploy-action@v4.3.3

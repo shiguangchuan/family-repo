@@ -19,9 +19,11 @@ jobs:
   iptv:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
+
       - name: Download & transform IPTV playlist
-        uses: actions/checkout@v3
         run: bash ./script/generate_iptv.sh
+
       - name: Archive
         uses: actions/upload-artifact@v3
         with:
@@ -34,6 +36,7 @@ jobs:
     steps:
       - name: Download all artifacts
         uses: actions/download-artifact@v3
+
       - name: Publish to Pages
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:

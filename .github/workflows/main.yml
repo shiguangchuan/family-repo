@@ -15,24 +15,28 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  publish-iptv:
-    # The type of runner that the job will run on
+  iptv:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-      
       - name: Download & transform IPTV playlist
+        uses: actions/checkout@v3
         run: bash ./script/generate_iptv.sh
-      
-      - name: Deploy
+      - name: Archive
+        uses: actions/upload-artifact@v3
+        with:
+          name: iptv-archive
+          path: ./iptv
+
+  publish:
+    runs-on: ubuntu-latest
+    needs: [iptv]
+    steps:
+      - name: Download all artifacts
+        uses: actions/download-artifact@v3
+      - name: Publish to Pages
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
-          folder: publish
+          folder: ./
           branch: gh-pages
 

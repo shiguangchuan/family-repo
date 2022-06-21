@@ -5,7 +5,7 @@ set -e
 set -o pipefail
 set -x
 
-mkdir ./publish
+mkdir -p ./iptv
 curl --silent --fail https://raw.githubusercontent.com/qwerttvv/Beijing-IPTV/master/IPTV-Unicom-Multicast.m3u \
 | gawk '{
     if ($0 ~ /^rtp:\/\//) {
@@ -14,6 +14,6 @@ curl --silent --fail https://raw.githubusercontent.com/qwerttvv/Beijing-IPTV/mas
     } else {
         print $0;
     }
-}' > ./publish/iptv.m3u
+}' > ./iptv/iptv.m3u
 
-ls -l ./publish/
+ls -l ./iptv/

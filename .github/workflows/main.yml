@@ -10,7 +10,7 @@ on:
   pull_request:
     branches: [ "main" ]
   schedule:
-    - cron: '30 0 * * 0'
+    - cron: '30 0 * * 5'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -18,7 +18,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  publish-iptv:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -28,12 +28,11 @@ jobs:
       - uses: actions/checkout@v3
       
       - name: Download & transform IPTV playlist
-        run: bash ./generate.sh
+        run: bash ./script/generate_iptv.sh
       
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
           folder: publish
           branch: gh-pages
-
 

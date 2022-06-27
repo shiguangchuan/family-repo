@@ -1,7 +1,8 @@
 
 import os
+import sys
 
-block_list = ['./script']
+block_list = []
 
 def generate_file_index(root):
     items = []
@@ -27,4 +28,4 @@ def generate_file_index(root):
             f.write('</body>\n</html>\n')
 
 if __name__ == '__main__':
-    generate_file_index('./')
+    generate_file_index(sys.argv[1])

@@ -93,6 +93,8 @@ http://192.168.10.1:8686/rtp/225.1.2.175:5002
 http://192.168.10.1:8686/rtp/225.1.2.176:5002
 #EXTINF:-1 tvg-name="央视精品" tvg-logo="http://iptv.im2k.com/logo/CCTV-WHJP.png" group-title="中央",CCTV央视文化精品
 http://192.168.10.1:8686/rtp/225.1.2.177:5002
+#EXTINF:-1 tvg-name="发现之旅" tvg-logo="http://iptv.im2k.com/logo/CNDF-FXZL.png" group-title="中央",中央新影发现之旅 SD
+http://192.168.10.1:8686/rtp/225.1.1.183:5002
 #EXTINF:-1 tvg-name="老故事" tvg-logo="http://iptv.im2k.com/logo/CNDF-LGS.png" group-title="中央",中央新影老故事 SD
 http://192.168.10.1:8686/rtp/225.1.1.188:5002
 #EXTINF:-1 tvg-name="中学生" tvg-logo="http://iptv.im2k.com/logo/CNDF-ZXS.png" group-title="中央",中央新影中学生 SD
@@ -143,8 +145,6 @@ http://192.168.10.1:8686/rtp/225.1.2.81:5002
 http://192.168.10.1:8686/rtp/225.1.2.82:5002
 #EXTINF:-1 tvg-name="三沙卫视" tvg-logo="http://iptv.im2k.com/logo/SANSHA.png" group-title="地方卫视",三沙卫视
 http://192.168.10.1:8686/rtp/225.1.1.182:5002
-#EXTINF:-1 tvg-name="澳门卫视" tvg-logo="http://iptv.im2k.com/logo/MSTV.png" group-title="地方卫视",澳门卫视(测试)
-http://192.168.10.1:8686/rtp/225.1.1.95:5002
 #EXTINF:-1 tvg-name="甘肃卫视" tvg-logo="http://iptv.im2k.com/logo/GANSU.png" group-title="地方卫视",甘肃卫视 SD
 http://192.168.10.1:8686/rtp/225.1.1.30:5002
 #EXTINF:-1 tvg-name="内蒙古卫视" tvg-logo="http://iptv.im2k.com/logo/NEIMENGGU.png" group-title="地方卫视",内蒙古卫视 SD
@@ -297,8 +297,14 @@ http://192.168.10.1:8686/rtp/225.1.1.141:5002
 http://192.168.10.1:8686/rtp/225.1.1.78:5002
 #EXTINF:-1 tvg-logo="http://iptv.im2k.com/logo/TJIPTV902.png" group-title="连播频道",902
 http://192.168.10.1:8686/rtp/225.1.1.79:5002
-#EXTINF:-1 tvg-logo="http://iptv.im2k.com/logo/TIANJIN.png" group-title="连播频道",电视墙
+#EXTINF:-1 group-title="连播频道",迪拜体育(测试)
+http://192.168.10.1:8686/rtp/225.1.1.93:5002
+#EXTINF:-1 group-title="连播频道",卡塔尔电视台(测试)
+http://192.168.10.1:8686/rtp/225.1.1.94:5002
+#EXTINF:-1 group-title="连播频道",电视墙(测试)
 http://192.168.10.1:8686/rtp/225.1.1.96:5002
+#EXTINF:-1 group-title="连播频道",央视频(测试) UHD
+http://192.168.10.1:8686/rtp/225.1.2.206:5002
 #EXTINF:-1 tvg-name="三佳购物" tvg-logo="http://iptv.im2k.com/logo/SANJIAGOUWU.png" group-title="购物频道",天津三佳购物
 http://192.168.10.1:8686/rtp/225.1.1.151:5002
 #EXTINF:-1 tvg-name="东方购物" tvg-logo="http://iptv.im2k.com/logo/OCJ.png" group-title="购物频道",东方购物

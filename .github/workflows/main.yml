@@ -25,7 +25,7 @@ jobs:
         run: bash ./script/generate_iptv.sh
 
       - name: Archive
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: iptv
           path: ./iptv

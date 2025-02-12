@@ -17,8 +17,9 @@ function transform() {
 
 mkdir -p ./iptv
 
-transform "https://raw.githubusercontent.com/qwerttvv/Beijing-IPTV/master/IPTV-Unicom-Multicast.m3u" "./iptv/bjuc_iptv.m3u"
 transform "https://raw.kkgithub.com/chilinha/tv/main/unicom.m3u" "./iptv/tjuc_iptv.m3u"
+ls -l ./iptv/
+transform "https://raw.githubusercontent.com/qwerttvv/Beijing-IPTV/master/IPTV-Unicom-Multicast.m3u" "./iptv/bjuc_iptv.m3u"
 
 ls -l ./iptv/
 

@@ -8,7 +8,8 @@ function transform() {
     curl --silent --fail --insecure "${1}" \
     | awk '{
         if ($0 ~ /^rtp:\/\//) {
-            gsub(/\:\/\//, "/");
+            gsub(/:\/\//, "/");
+#            gsub(/\:\/\//, "/");
             print "http://192.168.10.1:8686/"$0;
         } else {
             print $0;

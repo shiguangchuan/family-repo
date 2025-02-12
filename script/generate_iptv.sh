@@ -5,11 +5,9 @@ set -o pipefail
 set -x
 
 function transform() {
-    curl --silent --fail --insecure "${1}" \
-    | awk '{
+    curl --silent --fail --insecure "${1}" | gawk '{
         if ($0 ~ /^rtp:\/\//) {
             gsub(/:\/\//, "/");
-#            gsub(/\:\/\//, "/");
             print "http://192.168.10.1:8686/"$0;
         } else {
             print $0;
